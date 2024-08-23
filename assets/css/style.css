@@ -1,0 +1,775 @@
+/* Default Light Mode Styles */
+body {
+  background-color: #f8f9fa;
+  color: #212529;
+  font-family: Arial, sans-serif;
+}
+.content1 .bg {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.sectiontitle .heading {
+  color: #212529;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #d2c9c9;
+  color: #e0e0e0;
+}
+body.dark-mode #navbar.scrolled .nav-item .nav-link {
+  color: #ffffff;
+}
+body.dark-mode .content1 .bg {
+  background-color: rgba(33, 33, 33, 0.8);
+}
+body.dark-mode .sectiontitle .heading {
+  color: #e0e0e0;
+}
+
+body.dark-mode .card {
+  background-color: #2c2c2c;
+  border: 1px solid #333333;
+}
+
+body.dark-mode .card .card-footer {
+  background-color: #2c2c2c;
+  color: #ffff;
+}
+
+body.dark-mode .wrapper {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark-mode #overview .one_third {
+  background-color: #2c2c2c;
+}
+
+/* Styling for the dark mode toggle switch */
+.dark-mode-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #e0e0e0;
+  color: #121212;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.dark-mode-toggle:hover {
+  background-color: #d0d0d0;
+}
+#content4 .bgded .clear {
+  background-image: url("assets/img/2.png");
+  background-size: cover; /* Memastikan gambar menutupi seluruh elemen dengan proporsi yang benar */
+  background-position: center; /* Memusatkan gambar di tengah */
+  background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+  padding: 10px; /* Sesuaikan padding sesuai kebutuhan */
+  border-radius: 10px; /* Jika ingin sudut yang halus */
+  /* margin-bottom: 10px; */
+}
+
+@media (max-width: 768px) {
+  .content1 .bg {
+    background-size: contain; /* Menjaga proporsi gambar agar tidak ngezoom pada mobile view */
+    background-position: center top; /* Memastikan gambar tetap terlihat dengan baik di mobile */
+    background-attachment: scroll;
+  }
+}
+
+.content1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.content1 .bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.media-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-logo {
+  width: 50%; /* Sesuaikan lebar logo */
+  height: auto;
+  margin-left: 20px; /* Jarak antara video dan logo */
+}
+
+.overlay {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .media-container {
+    flex-direction: column; /* Pada tampilan mobile, video dan logo ditampilkan vertikal */
+  }
+
+  .bg-video,
+  .bg-logo {
+    width: 80%; /* Sesuaikan ukuran di mobile */
+    margin: 10px 0;
+  }
+}
+
+.content1 .overlay {
+  position: absolute;
+  bottom: 0px; /* Jarak overlay dari bagian bawah elemen .bg */
+  left: 50%;
+  transform: translateX(-50%); /* Memusatkan overlay secara horizontal */
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box; /* Memastikan padding tidak menambah lebar elemen */
+}
+
+.content1 h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content1 p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.content1 .btn-invest {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #ffcc00;
+  color: #333;
+  border: none;
+  border-radius: 25px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.content1 .btn-invest:hover {
+  background-color: #ffb800;
+  transform: translateY(-5px); /* Efek hover pada tombol */
+}
+
+/* Warna navbar modern dan estetik */
+#navbar {
+  background-color: #2c2c2c; /* Warna gelap dengan transparansi */
+  backdrop-filter: blur(10px); /* Efek blur di belakang navbar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahan bayangan untuk memberikan kesan floating */
+  transition: background-color 0.5s ease; /* Animasi transisi yang halus */
+  color: white;
+}
+
+/* CSS untuk animasi pesan masuk */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Terapkan animasi pada blockquote */
+#testimonials blockquote {
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Tambahkan efek overlay */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Overlay gelap dengan transparansi */
+  padding: 20px; /* Ruang di dalam overlay */
+  border-radius: 10px; /* Sudut yang membulat pada overlay */
+}
+
+/* Menyempurnakan warna navbar-toggler */
+.navbar-toggler {
+  border: none; /* Menghapus border default */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Gaya untuk link navbar */
+.nav-link {
+  transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out; /* Transisi halus untuk efek hover */
+}
+
+/* Warna teks navbar saat aktif */
+.nav-link.active {
+  color: red; /* Warna kuning cerah untuk menandakan link aktif */
+  border-bottom: 2px solid red; /* Garis bawah yang sesuai dengan warna aktif */
+}
+
+/* Warna teks navbar saat hover */
+.nav-link:hover {
+  color: red; /* Warna kuning cerah saat hover */
+  border-bottom: 2px solid red; /* Garis bawah saat hover */
+}
+
+/* Menyempurnakan tampilan switch */
+.form-check-input {
+  background-color: #ffff; /* Warna latar belakang switch */
+  border-color: #333; /* Warna border switch */
+}
+
+.form-check-input:checked {
+  background-color: red; /* Warna switch saat aktif */
+  border-color: red; /* Warna border switch saat aktif */
+}
+
+.form-check-label {
+  margin-left: 0.5rem; /* Jarak antara switch dan ikon */
+}
+
+.navbar-nav .nav-link {
+  font-family: roboto;
+  font-size: 1.2rem; /* Sesuaikan ukuran font */
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px; /* Memberikan ruang untuk underline */
+  transition: color 0.3s ease; /* Animasi untuk warna teks */
+  color: white;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px; /* Ketebalan underline */
+  background-color: white; /* Warna underline */
+  transition: width 0.3s ease; /* Durasi dan jenis animasi */
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%; /* Underline muncul penuh saat di-hover atau jika active */
+}
+
+.navbar-nav .nav-link.active {
+  color: #f8f9fa; /* Warna teks jika active */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f8f9fa; /* Warna teks saat di-hover */
+}
+
+#navbar.scrolled {
+  background-color: rgba(13, 13, 13, 0.3); /* Semi-transparent when scrolled */
+}
+
+#navbar.scrolled .nav-item .nav-link {
+  color: black;
+}
+
+#navbar .navbar-brand img {
+  width: 50px; /* Atur lebar sesuai kebutuhan */
+  height: auto; /* Mempertahankan proporsi gambar */
+}
+
+#introblocks .nospace.group {
+  display: flex;
+  justify-content: space-between; /* Mengatur jarak di antara elemen */
+  flex-wrap: wrap; /* Membuat elemen tidak keluar dari baris jika terlalu banyak */
+}
+
+#introblocks .one_third {
+  position: relative; /* Pastikan elemen one_third menjadi referensi untuk positioning */
+  overflow: visible;
+}
+
+#introblocks .one_third figure.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Pastikan figure card memiliki tinggi yang sesuai */
+  overflow: hidden; /* Ini akan memastikan gambar tidak keluar dari area card */
+  position: relative; /* Agar badge bisa diposisikan relatif terhadap figure */
+  overflow: visible;
+}
+
+.badge {
+  position: absolute;
+  top: -10px; /* Geser sedikit ke atas agar terlihat seperti melayang di luar card */
+  right: -10px; /* Geser sedikit ke kanan agar keluar dari card */
+  z-index: 10; /* Pastikan badge berada di atas elemen lain */
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  background-color: #dc3545; /* Warna latar belakang untuk badge */
+  color: #fff; /* Warna teks pada badge */
+  border-radius: 12px; /* Membuat badge terlihat seperti lingkaran */
+}
+
+.card-footer {
+  background-color: #f8f9fa; /* Sesuaikan dengan warna background yang diinginkan */
+  padding: 10px;
+  width: 100%; /* Pastikan footer mengambil lebar penuh dari card */
+  box-sizing: border-box; /* Pastikan padding tidak menambah lebar */
+  border-top: 1px solid #dee2e6; /* Opsional: tambahkan border untuk pemisah */
+  text-align: center;
+}
+
+#introblocks .one_third figure.card img {
+  max-height: 400px; /* Ubah angka ini sesuai dengan kebutuhan */
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  object-fit: contain; /* Memastikan gambar tetap dalam proporsi */
+}
+
+#introblocks .one_third {
+  flex: 1 1 30%; /* Mengatur lebar dari setiap item */
+  margin: 0 10px; /* Menambahkan sedikit jarak di antara item */
+}
+
+#introblocks .one_third figure.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#introblocks .one_third figure.card:active {
+  transform: scale(0.98); /* Membuat elemen sedikit mengecil saat diklik */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Menambahkan bayangan lebih jelas */
+}
+
+/* Media query untuk mobile view */
+@media (max-width: 768px) {
+  #introblocks .nospace.group {
+    flex-direction: column; /* Mengatur elemen menjadi satu kolom */
+    align-items: center; /* Memusatkan elemen secara horizontal */
+  }
+
+  #introblocks .one_third {
+    flex: 1 1 100%; /* Mengatur elemen menjadi 100% lebar kontainer */
+    margin: 10px 0; /* Menambahkan jarak antara elemen atas-bawah */
+  }
+}
+
+.wrapper.bgded.card.shadow-lg {
+  position: relative;
+  background-size: cover; /* Memastikan gambar latar belakang menutupi seluruh elemen */
+  background-position: center; /* Menempatkan gambar di tengah */
+  z-index: 1; /* Memastikan konten berada di atas background */
+}
+
+/* Overlay untuk transparansi dan blur */
+.wrapper.bgded.card.shadow-lg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit; /* Menggunakan gambar yang sama */
+  opacity: 0.7; /* Menyesuaikan tingkat transparansi */
+  filter: blur(10px); /* Menambahkan efek blur */
+  z-index: -1; /* Membuat overlay di belakang konten */
+}
+
+.circle {
+  width: 100px; /* Sesuaikan ukuran gambar */
+  height: 100px; /* Pastikan tingginya sama dengan lebar untuk membuat lingkaran sempurna */
+  border-radius: 50%; /* Membuat gambar menjadi bulat */
+  object-fit: cover; /* Memastikan gambar tetap proporsional di dalam lingkaran */
+  display: block; /* Menghilangkan spasi bawah gambar jika ada */
+}
+
+/* Konten modal */
+#cardModal3 .modal-content {
+  border-radius: 35px; /* Opsional: Menghilangkan border-radius jika diperlukan */
+}
+
+/* Konten modal-body */
+#cardModal3 .modal-body {
+  padding: 0; /* Menghilangkan padding untuk memastikan video menggunakan seluruh ruang */
+}
+
+/* Kontainer card */
+#cardModal3 .card {
+  position: relative; /* Mengatur posisi relative untuk kontainer video */
+  overflow: hidden; /* Menghindari overflow video dari kontainer */
+  width: 100%; /* Mengatur lebar card agar sesuai dengan modal */
+  height: auto; /* Mengatur tinggi card agar sesuai dengan modal */
+}
+
+/* Video */
+#cardModal3 .card video {
+  display: block; /* Menghilangkan spasi di bawah video */
+  width: 100%; /* Mengatur lebar video agar sesuai dengan card */
+  height: 450px; /* Mengatur tinggi video agar proporsional */
+  object-fit: cover; /* Memastikan video menutupi card tanpa deformasi */
+  border-radius: 15px;
+}
+
+.group.btmspace-50 {
+  display: flex;
+  justify-content: center; /* Menyusun elemen sejajar di tengah secara horizontal */
+  gap: 20px; /* Menambahkan jarak antar kolom, sesuaikan sesuai kebutuhan */
+}
+
+.group.btmspace-50 .one_quarter {
+  flex: 1; /* Membuat setiap kolom mengambil lebar yang sama */
+  max-width: 30%; /* Membatasi lebar maksimum setiap kolom */
+  box-sizing: border-box; /* Memastikan padding dan border tidak mempengaruhi ukuran */
+  text-align: center; /* Mengatur teks di dalam kolom menjadi rata tengah */
+}
+
+@media (max-width: 768px) {
+  .group.btmspace-50 {
+    flex-direction: column; /* Mengatur elemen menjadi satu kolom pada layar kecil */
+    align-items: center; /* Memusatkan kolom di tengah */
+  }
+
+  .group.btmspace-50 .one_quarter {
+    max-width: 100%; /* Memastikan kolom mengambil lebar penuh pada layar kecil */
+  }
+}
+
+/* Kontainer utama */
+#overview {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Judul bagian */
+#overview .sectiontitle {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Daftar layanan */
+#overview ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Jarak antar item */
+  padding: 0;
+  list-style-type: none;
+  justify-content: center; /* Menyusun item di tengah secara horizontal */
+}
+
+/* Item layanan */
+#overview li {
+  flex: 1 1 calc(40% - 20px); /* Lebar 25% dari kontainer, dikurangi jarak */
+  max-width: calc(90% - 300px); /* Lebar maksimum item */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Menyusun konten di tengah secara vertikal */
+  align-items: center; /* Menyusun konten di tengah secara horizontal */
+  background-color: #f4f4f4; /* Background item */
+  padding: 40px;
+  box-shadow: 0 9px 14px rgba(0, 0, 0, 0.1); /* Bayangan item */
+  border-radius: 8px; /* Sudut melengkung */
+}
+
+/* Mengatur elemen dalam artikel */
+#overview article * {
+  margin: 0;
+  padding: 0;
+}
+
+/* Ikon dan teks di dalam artikel */
+#overview article > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#overview article > div i {
+  font-size: 36px;
+  margin-right: 15px;
+}
+
+#overview article h6 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Gaya footer */
+.card-footer {
+  margin-top: 40px;
+}
+
+.card-footer .center {
+  text-align: center;
+}
+
+.card-footer .btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.card-footer .btn:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+  #overview ul {
+    flex-direction: column; /* Menampilkan item dalam satu kolom pada layar kecil */
+    align-items: center; /* Menyusun item di tengah secara horizontal pada layar kecil */
+  }
+
+  #overview li {
+    flex: 1 1 100%; /* Membuat item 100% lebar pada layar kecil */
+    max-width: 100%; /* Memastikan lebar maksimal item tidak melebihi 100% */
+  }
+}
+
+/* Tambahkan animasi fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#overview .one_third {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#overview .one_third.show {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+#overview .group li {
+  opacity: 0; /* Elemen dimulai dalam keadaan tidak terlihat */
+  transform: translateY(20px); /* Mengatur posisi awal sedikit di bawah */
+  animation: fadeIn 1s ease forwards; /* Animasi fadeIn */
+}
+
+#overview .group li:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+#overview .group li:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+#overview .group li:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+#overview .group li:nth-child(4) {
+  animation-delay: 1.2s;
+}
+
+/* Footer
+--------------------------------------------------------------------------------------------------------------- */
+#footer {
+  padding: 80px 0;
+}
+
+#footer .heading {
+  margin-bottom: 50px;
+  font-size: 1.2rem;
+}
+
+#footer > div:first-of-type .heading {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+#footer > div:first-of-type .faico {
+  margin-bottom: 30px;
+}
+
+#footer input,
+#footer button {
+  border: 1px solid;
+}
+#footer input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+}
+#footer button {
+  padding: 8px 18px 10px;
+  text-transform: uppercase;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+#footer .linklist li {
+  display: block;
+  margin-bottom: 15px;
+  padding: 0 0 15px 0;
+  border-bottom: 1px solid;
+}
+#footer .linklist li:last-child {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+#footer .linklist li::before,
+#footer .linklist li::after {
+  display: table;
+  content: "";
+}
+#footer .linklist li,
+#footer .linklist li::after {
+  clear: both;
+}
+
+#footer .contact.linklist li,
+#footer .contact.linklist li:last-child {
+  position: relative;
+  padding-left: 40px;
+}
+#footer .contact li * {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+#footer .contact li i {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  font-size: 16px;
+  text-align: center;
+}
+
+#footer .latestimg > li:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+} /* Removes bottom margin from the last three items - margin is restored in the media queries when items stack */
+#footer .latestimg > li:nth-child(3n + 1) {
+  margin-left: 0;
+  clear: left;
+} /* Removes the need to add class="first" */
+#footer .latestimg > li img {
+  width: 100%;
+} /* Force the image to resize to take the full space - may have to be changed for tablets, depends on personal preference */
+#footer .latestimg > li a.imgover {
+  display: block;
+}
+
+#footer #ctdetails {
+  padding-top: 80px;
+  border-top: 1px solid;
+}
+#footer #ctdetails ul li div {
+  position: relative;
+  min-height: 30px;
+  padding: 0 0 0 35px;
+  line-height: 1;
+}
+#footer #ctdetails ul li div i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 23px;
+  font-size: 20px;
+  text-align: center;
+}
+#footer #ctdetails ul li div span {
+  display: block;
+}
+#footer #ctdetails ul li div strong {
+  display: block;
+  margin: 0 0 8px 0;
+  text-transform: capitalize;
+}
+
+/* Dark Mode Styles */
+body.dark-mode .modal-content {
+  background-color: #3b3838; /* Warna latar belakang modal yang lebih terang */
+  color: #333333; /* Warna teks yang lebih gelap untuk kontras */
+}
+body.dark-mode .modal-header {
+  background-color: #3b3838; /* Warna latar belakang header modal yang lebih terang */
+  color: #333333; /* Warna teks header modal */
+}
+body.dark-mode .modal-title {
+  color: #d8d0d0; /* Warna judul modal yang lebih gelap */
+}
+body.dark-mode .btn-close {
+  filter: invert(0.6); /* Sedikit mengubah warna tombol close */
+}
+body.dark-mode .modal-body {
+  color: #9b9494; /* Warna teks modal body yang lebih gelap */
+}
+body.dark-mode .card-caption p {
+  color: #fdfafa; /* Warna teks caption kartu yang lebih gelap */
+}
+body.dark-mode .card-img {
+  border: 1px solid #3b3838; /* Border gambar dengan warna abu-abu yang lebih terang */
+}
+
+.modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Agar konten tetap rapi di layar kecil */
+}
+
+.modal-body figure {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; /* Sesuaikan dengan lebar modal */
+  flex-wrap: wrap; /* Agar gambar dan teks tetap rapi di layar kecil */
+}
+
+.modal-body img {
+  max-width: 45%; /* Atur lebar gambar */
+  height: auto; /* Menjaga aspek rasio gambar */
+  margin-right: 10px; /* Jarak antara gambar dan teks */
+}
+
+.modal-body figcaption {
+  max-width: 50%; /* Atur lebar caption */
+  text-align: left; /* Ratakan teks ke kiri */
+}
